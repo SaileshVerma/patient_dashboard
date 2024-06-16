@@ -10,7 +10,10 @@ export const DiagnosisList = ({ diagnosticList }: { diagnosticList: any }) => {
         </div>
         {diagnosticList.map((data: any) => {
           return (
-            <div className="flex justify-between items-center hover:bg-blue-100 rounded-2xl">
+            <div
+              key={data.name}
+              className="flex justify-between items-center hover:bg-blue-100 rounded-2xl"
+            >
               <span className="text-left">{data.name}</span>
               <span className="text-sm text-left flex-wrap py-6 px-10">
                 {data.description}

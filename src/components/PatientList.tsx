@@ -8,6 +8,7 @@ export const PatientList = ({ userList }: { userList: User[] | undefined }) => {
       {userList?.map((user: User) => {
         return (
           <PatientProfileTile
+            key={user.phone_number}
             gender={user.gender}
             image={user.profile_picture}
             name={user.name}
